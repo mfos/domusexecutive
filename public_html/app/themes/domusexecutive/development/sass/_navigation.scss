@@ -1,0 +1,264 @@
+/*----------------------------*/
+/*---------Navigation ---------*/
+/*----------------------------*/
+
+
+.menu-btn {
+    right: 20px;
+    position: absolute;
+    top: 18px;
+    float: right;
+    height: 20px;
+    width: 27px;
+    padding: 10px 0 0 0;
+    margin-right: 0;
+    margin-top: 0px;
+}
+
+.menu-container {
+	padding-bottom: 80px;
+    padding-top: 90px;
+	margin: 0;
+	list-style: none;
+	padding-right: 20px;
+	padding-left: 20px;
+		
+	li {
+		margin:0;
+		text-align: left;
+		border-top: 1px solid #4E4E4E;
+		list-style: none;
+		&:first-child {
+			border-top: none;
+		}
+			
+		a {
+			@include font-size(1.6);
+			@include line-height(1.4);	
+			font-family: $font-main;
+			color: $color-light-text;
+			text-decoration: none;
+			text-transform: uppercase;
+			padding: 16px 0 14px;
+			width:100%;
+			@include transition(all .2s ease-in-out);
+            display: block;
+			&:hover {
+				color: #ffffff;
+			}
+
+		}
+		.sub-menu {
+			padding-left: 20px;
+			padding-bottom: 20px;
+			li {
+				border-top: none;
+				a {
+					text-transform: none;
+				}
+			}
+		}
+	}
+
+}
+
+/********* PUSH MENU **********/
+
+.body-cover {
+    background-color: transparent;
+}
+
+.push-menu {
+    overflow-x: hidden;
+    @include transition(all 600ms cubic-bezier(.7,0,.3,1));
+    left:0;
+    
+	&.body-under {
+        height: 100%;
+        overflow: hidden!important;
+		left: -260px;
+		
+		
+		.body-cover {
+            position: absolute;
+            bottom:0;
+            top:0;
+            width:100%;
+            left:0;
+            right:0;
+            z-index: 999;
+        }
+			
+		header {
+			.menu-btn {
+				.burger-click-region {
+					opacity: .5;
+				}
+			}
+		}
+   }
+
+}
+
+#showRightPush {
+    background-color: transparent;
+    padding: 0;
+}
+#showRightPushInMenu {
+    background-color: transparent;
+    padding: 0;
+}
+
+
+.push-body-left {
+	overflow-y: hidden;
+	overflow-x: auto;
+	position:relative;
+}
+
+
+
+.push-menu-container {
+    position: fixed;
+	width: 260px;
+	height: 100%;
+	top: 0;
+	bottom:0;
+	height:100vh;
+	z-index: 1000;
+	background: #ffffff;
+    right: -260px;
+    @include transition(all 600ms cubic-bezier(.7,0,.3,1));
+
+    &.menu-open {
+        right:0;       
+        
+    }
+    .main-menu-wrapper {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+        z-index: 100;
+        background-color: #000000;
+        .main-menu-inner {
+            min-height: 100%;
+            -webkit-overflow-scrolling: touch;         
+        }
+    }
+    .menu-btn {
+        right: 20px;
+        position: absolute;
+        top: 18px;
+	    float: right;
+	    height: 54px;
+	    width: 41px;
+	    padding: 10px 0 0 0;
+	    margin-right: 0;
+	    margin-top: 0px;
+    }
+        
+}
+
+
+/********   BURGER BUTTON  **********/
+
+.burger-click-region {
+
+  @extend .svg-menu-open;
+  @extend .svg-menu-open-dims;
+  cursor: pointer;
+  position: relative;
+  @include transition(opacity .2s ease-in-out);  
+}
+
+#showRightPush_inmenu {
+    background-color: transparent;
+    
+    .burger-click-region {
+        @extend .svg-menu-close;
+        @extend .svg-menu-close-dims;
+        @include transition(all .2s ease-in-out);    
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        &:hover {
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);            
+        } 
+    }
+
+}
+
+
+
+
+
+/********* MEDIA QUERIES  **********/
+
+
+/* Extra Small Devices, (Phones, 480px and up) */
+@media only screen and (min-width: $screen-xs-min) {
+
+   
+}
+/* iPhone 6 in landscape */
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : landscape) { 
+
+
+
+}
+
+
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+
+
+	.push-menu-container {
+		width:315px;
+		right:-315px;
+	}
+	.menu-container {
+		padding-top: 135px;
+	}
+	.push-menu.body-under {
+		left:-315px;
+	}
+	.menu-btn {
+		top:40px;
+		right:40px;
+	}
+	.push-menu-container {
+		.menu-btn {
+			top:35px;
+			right:40px;
+		}
+	}
+	
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) { 
+
+
+	
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) {
+
+  
+   
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1400px) {
+    
+   
+}

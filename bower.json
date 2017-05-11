@@ -1,0 +1,19 @@
+{
+  "name": "domusexecutive",
+  "description": "Domus Executive project",
+  "authors": [
+    "Michael Foster <mfos@me.com>"
+  ],
+  "dependencies": {
+    "slick-carousel": "1.5.*"
+  },
+  "overrides": {
+    "slick-carousel": {
+      "main": [
+	  	"slick/slick.scss",
+	  	"slick/slick.min.js"
+	  	],
+	  	"dependencies": {}
+	  }
+	}
+}

@@ -1,0 +1,16 @@
+.ie9 {
+    .gform_wrapper .gform_body .gform_fields .gfield .ginput_container select {
+	    background-image: none;
+    }
+
+}
+
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+
+    .ie9 {
+
+    }
+
+}

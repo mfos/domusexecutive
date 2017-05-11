@@ -1,0 +1,43 @@
+# -------------------------
+# BEGIN Whitelisted Files
+# -------------------------
+
+# track these files, if they exist
+!.gitignore
+!.editorconfig
+!.eslintrc
+!README.md
+!CHANGELOG.md
+!composer.json
+!composer.lock
+!vendor/autoload.php
+!public/app/themes/every1roots/
+
+
+# Track environment specific wp-config
+!wp-config.default.php
+!wp-config.local.php
+!wp-config.env.php
+!wp-config.php
+!wp-config.production.php
+!wp-config.staging.php
+
+
+*.DS_Store
+lib
+logs
+node_modules
+bower_components
+public_html/core
+public_html/vendor
+public_html/app/plugins/*
+public_html/app/themes/index.php
+public_html/app/uploads
+!public_html/app/uploads/index.php
+public_html/app/themes/every1roots/css
+public_html/app/themes/every1roots/js
+public_html/app/themes/every1roots/development/vendor
+composer.phar
+
+!public_html/app/cache/index.html
+public_html/app/cache/*

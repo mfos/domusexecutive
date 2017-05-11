@@ -1,0 +1,71 @@
+/*!
+Theme Name: Domus Executive Theme
+Theme URI: 
+Author: Michael Foster
+Author URI: http://www.michaelfoster.uk
+Description: Domus Executive Theme
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: Domus Executive
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+/*--------------------------------------------------------------
+# Normalise css
+--------------------------------------------------------------*/
+@import "normalize";
+/*--------------------------------------------------------------
+# Variables - Variables that will override bootstrap variables
+--------------------------------------------------------------*/
+@import "fonts";
+/*--------------------------------------------------------------
+# Miniboot -  minimal bootstrap based styles V1.1
+--------------------------------------------------------------*/
+@import "miniboot/miniBoot";
+/*--------------------------------------------------------------
+# Variables - Variables that will override bootstrap variables
+--------------------------------------------------------------*/
+@import "variables";
+/*--------------------------------------------------------------
+# Mixins - Useful mixins ( retina sprite etc )
+--------------------------------------------------------------*/
+@import "mixins";
+/*--------------------------------------------------------------
+# SVG Spriting	
+--------------------------------------------------------------*/
+@import "sprite";
+/*--------------------------------------------------------------
+# Elements - Common elements used throughtout the site
+--------------------------------------------------------------*/
+@import "elements";
+/*--------------------------------------------------------------
+# Typography - Type stuff
+--------------------------------------------------------------*/
+@import "typography";
+/*--------------------------------------------------------------
+# Forms - Used to style 3rd party forms ( NOT BOOTSTRAP! )
+--------------------------------------------------------------*/
+@import "forms";
+/*--------------------------------------------------------------
+# Navigation - menus etc
+--------------------------------------------------------------*/
+@import "navigation";
+/*--------------------------------------------------------------
+# Animate CSS	-  For dev, move only ones used for production
+--------------------------------------------------------------*/
+@import "animate";
+/*--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Main - Main stylesheet
+--------------------------------------------------------------*/
+@import "main";
+/*--------------------------------------------------------------
+# Browser support styles
+--------------------------------------------------------------*/
+@import "browser";
