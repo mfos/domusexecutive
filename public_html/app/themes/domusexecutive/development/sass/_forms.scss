@@ -2,11 +2,6 @@
 /*------------ Forms ----------*/
 /*----------------------------*/
 
-
-.validation_message, .validation_error {
-	color: red;
-}
-
 ::-webkit-input-placeholder {
     color: $color-text-input;
 }
@@ -51,11 +46,13 @@ option {padding:.25em .5em;}
 .gform_wrapper {
      padding: 10px 15px 10px 15px;
      margin-bottom: 0;
-       
+     font-family: $font-main;
     ul {
 	    list-style: none;
-    }  
-       
+	}  
+    .validation_message, .validation_error {
+		color: #874444 !important;
+	}   
     .gform_body {
         .gform_fields {
             list-style: none;
@@ -86,16 +83,51 @@ option {padding:.25em .5em;}
                         }
                         &::after {
 	                        @include pseudo;
-	                        top: 17px;
-							right: 21px;
-							width:20px;
-							height:20px;
-							//@include background-image-retina('images/hb-sprite', 'png', 50px, 384px, -13px, -322px, no-repeat);
+						    top: 12px;
+						    right: 12px;
+					        @extend .svg-form-validate;
+					        @extend .svg-form-validate-dims;
                         }
                     }
                 }
                 label {
                     display: none
+                }
+                &#field_1_5 {
+				    .gfield_description {
+					    height:20px;
+				    }
+				    label {
+					    font-family: $font-main;
+					    @include font-size(1.6);
+                        @include line-height(1.8);
+					    color: $color-text-main;
+						background-color: #d8d8d8;
+						border-radius: 3px;
+					    display: inline-block;
+					    cursor: pointer;
+					    padding: 10px 15px;
+						margin-left: 0;		
+						&::hover {
+						    cursor: hand;
+					    }				
+				    }
+				    .ginput_container {
+					    position: relative;
+					    height: auto;
+					    input {
+							width: 0.1px;
+							height: 0.1px;
+							opacity: 0;
+							overflow: hidden;
+							position: absolute;
+							z-index: -1;
+						    color: $color-text-main;
+						    background: #B2B2B2;
+						    height:45px;
+						    width:154px;
+					    }
+				    }
                 }
                 .ginput_container {
                     margin-bottom: 0;
@@ -111,6 +143,8 @@ option {padding:.25em .5em;}
 							 outline:0px !important;
                         }
 					}
+					
+					
               
                     input {
                         background-color: transparent;
@@ -134,6 +168,7 @@ option {padding:.25em .5em;}
                         font-family: $font-main;
                         font-weight: 300;
 					}
+/*
 					&.ginput_container_select {
 						position:relative; 
 						display: inline;
@@ -169,6 +204,7 @@ option {padding:.25em .5em;}
 							font-weight: 300;
 						}
 					}
+*/
 					&.ginput_container_fileupload {
 						background-color: transparent;
 					}
@@ -374,7 +410,7 @@ option {padding:.25em .5em;}
                     }  
                     &.textarea {
 	                    margin-left: 350px;
-	                    margin-top: -292px;
+	                    margin-top: -274px;
 	                    height:auto;
 	                    .ginput_container {
 		                    height:auto;

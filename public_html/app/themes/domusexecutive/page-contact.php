@@ -53,10 +53,11 @@ if(isset($post->ID)) {
 			    	
 			    	<ul>
 				    	<li><strong>Head office</strong></li>
-				    	<li>Address Line 1</li>
-				    	<li>Address Line 2</li>
-				    	<li>Address Line 3</li>
-				    	<li>Address Line 4</li>
+				    	<li>1, (5 & 6) Princes Court,</li>
+				    	<li>Silver Street,</li>
+				    	<li>Ramsbottom</li>
+				    	<li>Bury</li>
+				    	<li>BL0 0BJ</li>
 				    	</ul>
 				    <ul>
 				    	<li>TEL: 0800 299 299</li>

@@ -25,7 +25,7 @@ button {
     margin: 0;
     width:auto;
     @include font-size(1.4);
-    @include line-height(1.6);
+    @include line-height(1.4);
     text-decoration: none;
     font-family: $font-main;
     text-align: center;
@@ -41,8 +41,6 @@ button {
     	position: absolute;
     	z-index: -1;
         @include transition(all .2s ease-in-out);
-        //@extend .svg-right-arrow;
-        //@extend .svg-right-arrow-dims;
     	top: 15px;
     	right: 30px;
     }
@@ -155,9 +153,9 @@ article.page {
             @include line-height(2.8)
             &::before {
                 content: "• ";
-                color: $color-green;
-                font-size: 80px;
-                font-size: 8rem;
+                color: #000000;
+				@include font-size(4);
+				@include line-height(4)
                 position: absolute;
                 left: -40px;
                 top: -7px;

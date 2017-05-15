@@ -2,9 +2,19 @@
 	background: url("../images/sprite.svg") no-repeat;
 }
 
-.svg-menu-close {
+.svg-form-validate {
 	@extend %svg-common;
 	background-position: 0 0;
+}
+
+.svg-form-validate-dims {
+	width: 23px;
+	height: 23px;
+}
+
+.svg-menu-close {
+	@extend %svg-common;
+	background-position: 46% 53.48837209302326%;
 }
 
 .svg-menu-close-dims {

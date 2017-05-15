@@ -138,15 +138,19 @@ body {
 			@include font-size(2.8);
 			@include line-height(2.8);
 			font-family: $font-main;
-			color: #ffffff;
+			color: #000000;
 			margin-left: 20px;
 			margin-right: 20px;
 			span {
-				color: #6F8686;
+				color: #333333;
 			}		    
 	    }
 	    .btn-home {
 		    margin-left: 20px;
+		    background-color: transparent;
+		    border: 1px solid #000000;
+		    
+		    
 	    }
     }
     
@@ -432,7 +436,7 @@ body.home {
 				.text-container {
 					width:460px;
 					margin-left: 72px;
-					margin-top: 132px;
+					margin-top: 25%;
 					h1 {
 						@include font-size(3.4);
 						@include line-height(3.4);						
@@ -541,12 +545,19 @@ body.home {
 		overflow: hidden;
 		
 	}   
-   
+ 
 }
 
 /* Large devices (large desktops, 1400px and up) */
 @media (min-width: $screen-xlg-min) {
 
+   .page-candidates {
+	   .hero-img-wrapper {
+		   img {
+			   margin-top: -100px;
+		   }
+	   }
+   }
 
 }
 
