@@ -1,7 +1,7 @@
 var 
 	config = {
 		url: 'domusexecutive.mfos.co.uk',
-		themeName: 'domusexecutive',
+		themeName: 'brandricksearch',
 		autoprefixer: ['last 2 versions', 'IE 9']
 	},
 
@@ -131,7 +131,8 @@ gulp.task('scripts.all', function() {
 			//paths.scripts.dir + '/skip-link-focus-fix.js',
 			//paths.scripts.dir + '/modernizr.custom.js',
 			//paths.scripts.dir + '/scrollToPlugin.min.js',
-    		//paths.scripts.dir + '/ScrollMagic.js',
+    		paths.scripts.dir + '/ScrollMagic.js',
+    		paths.scripts.dir + '/animation.gsap.js',
 			paths.scripts.dir + '/jquery.easing.1.3.js',
 			paths.scripts.dir + '/jquery.easing.compatibility.js',
 			paths.scripts.dir + '/global.js'

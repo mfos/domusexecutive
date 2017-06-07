@@ -1,0 +1,191 @@
+/*----------------------------*/
+/*---------Typography ---------*/
+/*----------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+	color: $color-text-main;
+	font-family: $font-main;
+	@include font-size(1.6);
+	@include line-height(2.8);
+	-webkit-font-smoothing: antialiased;
+    font-weight: normal;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+    font-family: $font-main;
+    text-transform: none;
+    letter-spacing: 0.01em;
+    padding:5px 0 20px 0;
+    margin: 0;
+    font-weight: normal;
+    color: $color-black;
+}
+
+p {
+	margin-bottom: 1.8em;
+	font-family: $font-main;
+}
+
+dfn, cite, em, i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1.5em;
+	border: 0;
+	padding-top: 75px;
+	font-weight: normal;
+	position: relative;
+	@include font-size(1.6);
+	@include line-height(2.4);
+	
+	p {
+    	width: auto;
+    	font-weight: normal;
+	}
+	&:before {
+    	content: '"';
+    	position: absolute;
+    	width:50px;
+    	height:50px;
+    	text-align: center;
+    	left: 50%;
+    	top:60px;
+        margin-left: -25px;
+    	@include font-size(13);
+
+	}
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: $color-background-body;
+	font-family: $font-pre;
+	@include font-size(0.9375);
+	line-height: $font-line-height-pre;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code, kbd, tt, var {
+	font-family: $font-code;
+	@include font-size(0.9375);
+}
+
+abbr, acronym {
+	border-bottom: 1px dotted $color-green;
+	cursor: help;
+}
+
+mark, ins {
+	background: $color-background-body;
+	text-decoration: none;
+}
+
+h1 {
+	@include font-size(3);
+	@include line-height(3.4);	
+}
+h2 {
+	@include font-size(4);
+	@include line-height(4.2);
+	text-align: center;
+
+}
+h3 {
+    @include font-size(2.2);
+	@include line-height(2.3);
+	text-align: center;
+}
+h4 {
+    @include font-size(1.7);
+	@include line-height(2);   
+}
+
+.centered {
+   h1, h2, h3, h4, h5, h6, p {
+       text-align: center;
+   }
+}
+
+.lead {
+	@include font-size(1.8);
+	@include line-height(3);	
+}
+.lead-large {
+	@include font-size(2);
+	@include line-height(3.2);	
+}
+
+.internal-page {
+    .lead {
+    	@include font-size(2);
+    	@include line-height(3.2);        
+    }
+}
+
+.internal-page {
+    h1, h2, h3, h4 {
+        text-align: left;
+    }
+}
+/********* MEDIA QUERIES  **********/
+
+/* Extra Small Devices, (Phones, 480px and up) */
+@media only screen and (min-width: $screen-xs-min) {
+
+
+    h1 {
+    	@include font-size(3.8);
+    	@include line-height(4);	
+    }
+
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+
+    h1 {
+    	@include font-size(5);
+    	@include line-height(5.6);	
+    }
+	.lead-large {
+		@include font-size(2.4);
+		@include line-height(2.8);	
+	}
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) { 
+
+    h1 {
+    	@include font-size(6);
+    	@include line-height(6.6);	
+    }
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) {
+	
+    h1 {
+    	@include font-size(8);
+    	@include line-height(8.6);	
+    }
+}
+
+/* Large devices (large desktops, 1400px and up) */
+@media (min-width: 1400px) {
+   
+}

@@ -1,0 +1,276 @@
+/*----------------------------*/
+/*----Elements, Buttons   ----*/
+/*----------------------------*/
+a {
+    font-weight: normal;
+}
+a:active {
+    outline: none !important;
+}
+
+hr {
+	width:100px;
+	height:2px;
+	background-color: #ffffff;
+	margin-left: 0;
+	border: 0;
+}
+
+/*----   BUTTONS   ----*/
+
+button {
+	outline: 0;
+	border: 0;
+	cursor: pointer;
+}
+
+.base-btn {
+    @include transition(all .2s ease-in-out);
+    display: inline-block;
+    padding: 10px 20px 10px 20px;
+    letter-spacing: 0px;
+    position: relative;
+    margin: 0;
+    width:auto;
+    @include font-size(1.4);
+    @include line-height(1.4);
+    text-decoration: none;
+    font-family: $font-main;
+    text-align: center;
+    height:34px;
+    color: $color-black;
+    text-transform: none;
+    z-index: 10;
+    border-radius: 3px;
+    background-color:#DBDBDB;
+
+    &:after {
+    	content: '';
+    	position: absolute;
+    	z-index: -1;
+        @include transition(all .2s ease-in-out);
+    	top: 15px;
+    	right: 30px;
+    }
+    
+	&:focus {
+    	color: $color-black;
+	}
+	&:hover {
+		color: $color-black;
+    	background-color: $color-black;
+	}	
+	&.long {
+    	width:100%;
+    	max-width: 360px;
+	}
+    &.down {
+        &:after {
+            //@extend .svg-dd-arrow;
+            //@extend .svg-dd-arrow-dims;
+        	top: 20px;
+        }
+	}
+    
+}
+
+.button-center {
+    text-align: center;
+}
+
+.line-link {
+	position: relative;
+	color: #ffffff;
+	text-align: left;
+	@include font-size(1.4);
+    @include line-height(1.4);
+    width:100px;
+	&::after {
+		width:100px;
+		height:1px;
+		z-index: 99;
+		bottom:-5px;
+		background-color: #ffffff;
+		@include pseudo;
+		@include transition(all $speed_default ease);
+	}
+	&:hover {
+		text-decoration: none;
+		color: #ffffff;
+		&::after {
+			bottom: -5px
+		}
+	}
+}
+
+
+.no-touchevents {
+    .base-btn {
+        &:hover,
+        &:active {
+            color: $color-black;
+            background-color: #F5E8A8;
+            text-decoration: none;
+        }
+     
+    }
+
+}
+
+/*----   COOKIE CONSENT   ----*/
+.cookie-container {
+	.ctcc-more-info-link {
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+	button#catapultCookie {
+		
+	    @include transition(all .2s ease-in-out);
+	    display: inline-block;
+	    padding: 15px 75px 15px 30px;
+	    letter-spacing: 0px;
+	    position: relative;
+	    margin: 0;
+	    margin-left: 10px;
+	    width:auto;
+	    @include font-size(1.8);
+	    @include line-height(2);
+	    text-decoration: none;
+	    font-family: $font-main;
+	    text-align: left;
+	    height:50px;
+	    color: #ffffff;
+	    text-transform: none;
+	    z-index: 10;
+	    border-radius: 25px;
+	    background-color:$color-black;	
+	
+		&:after {
+	    	content: '';
+	    	position: absolute;
+	    	z-index: -1;
+	        @include transition(all .2s ease-in-out);
+	        //@extend .svg-right-arrow-wht;
+			//@extend .svg-right-arrow-wht-dims;
+	    	top: 15px;
+	    	right: 30px;
+	    }
+    	&:hover {
+			color: #ffffff;
+	    	background-color: $color-green;
+		}	
+	
+	}
+}
+
+
+/*----   LISTS   ----*/
+
+article.page {
+    ul {
+        margin: 27px 0;
+        list-style: none;
+        padding-left: 60px;
+    
+        li {
+            margin-bottom: 3px;
+            position: relative;
+            @include font-size(1.8);
+            @include line-height(2.8)
+            &::before {
+                content: "• ";
+                color: #000000;
+				@include font-size(4);
+				@include line-height(4)
+                position: absolute;
+                left: -40px;
+                top: -7px;
+            }
+        }
+    }    
+}
+
+
+/********* Media QUERIES  **********/
+
+
+/* Extra three Devices, (Phones, 480px and up) */
+@media only screen and (min-width: $screen-xs-min) {
+
+}
+
+/* Med devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+
+
+	.base-btn {
+		height: 44px;
+		padding: 15px 30px;
+	}
+	.btn-home {
+		width:200px;
+	}
+}
+/* iPad in landscape */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) { 
+   .anim-group-one {
+        top: 515px;
+    }
+    .anim-group-three {
+        top: 900px;
+    }
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media  (min-width: $screen-md-min) { 
+
+
+    .anim-group-one {
+        left: 190px;
+    }
+
+    
+
+}
+
+/* Large devices (Large desktops, 1200px and up) */
+@media  (min-width: $screen-lg-min) {
+	
+    .anim-group-one {
+        left: 360px;
+        top: 600px;
+    }
+    .anim-group-two {
+        top: 1234px;
+        left:94px;
+    }
+    .anim-group-three {
+        top: 1020px;
+    }
+   
+}
+
+/* Large devices (Large desktops, 1200px and up) */
+@media  (min-width: 1400px) {
+    
+    .anim-group-one {
+        left: 415px;
+        top:412px;
+    }
+    .anim-group-two {
+        top:1180px;
+    }
+    
+    .anim-group-three {
+        right: -124px;    
+        
+    }
+    .anim-group-four {    
+        top:1700px;
+        right:-110px;
+    }
+}

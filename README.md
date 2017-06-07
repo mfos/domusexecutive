@@ -77,6 +77,9 @@ $ gulp watch
 The multi environment config is provided by Studio 24s Wordpress Multi-Environment config project.
 Please read their repo for information on instructions.
 
+Grab the config folder for setting up environments from:
+https://github.com/mfos/wordpressConfig
+
 Current environments that have been setup for this project are located in ./config and have been set in the wp-config.env.php file to specific URLs.
 
 **wp-config.local**

@@ -38,6 +38,6 @@ public_html/app/themes/every1roots/css
 public_html/app/themes/every1roots/js
 public_html/app/themes/every1roots/development/vendor
 composer.phar
-
+config
 !public_html/app/cache/index.html
 public_html/app/cache/*
