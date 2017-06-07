@@ -39,5 +39,11 @@ public_html/app/themes/every1roots/js
 public_html/app/themes/every1roots/development/vendor
 composer.phar
 config
+config/wp-config.default.php    
+config/wp-config.local.php      
+config/wp-config.production.php
+config/wp-config.env.php        
+config/wp-config.php            
+config/wp-config.staging.php
 !public_html/app/cache/index.html
 public_html/app/cache/*
