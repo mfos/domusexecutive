@@ -103,6 +103,9 @@ option {padding:.25em .5em;}
                 &#field_1_5 {
 				    .gfield_description {
 					    height:20px;
+					    @include font-size(1.4);
+                        @include line-height(1.6);
+                        margin-top: 5px;
 				    }
 				    label {
 					    font-family: $font-san-serif;
@@ -113,8 +116,9 @@ option {padding:.25em .5em;}
 						border-radius: 3px;
 					    display: inline-block;
 					    cursor: pointer;
-					    padding: 10px 15px;
+					    padding: 15px 15px;
 						margin-left: 0;		
+						width:100%;
 						&::hover {
 						    cursor: hand;
 					    }				
@@ -217,9 +221,9 @@ option {padding:.25em .5em;}
 					}
 					&.ginput_container_radio {
 						background-color: transparent;
-						height:165px;
+						height:104px;
 						margin-bottom: 10px;
-						width:250px;
+						width:100%;
 						border: none;
 						margin-right: auto;
 						margin-left: auto;
@@ -239,7 +243,7 @@ option {padding:.25em .5em;}
 									background-color: #D2D2D2;
 									border-radius:3px;
 									text-align: center;
-									width:250px;
+									width:100%;
 									padding: 10px;
 								}
 								input[type=radio] {
@@ -287,18 +291,7 @@ option {padding:.25em .5em;}
                 }
 
 
-            }
-             #field_1_5 {
-			 	label {
-					display: inline-block;
-					font-weight: 300;
-					margin-left: 10px;
-					color: $color-text-input;
-				}
-         		.ginput_container {
-						border: none;
-				}
-            }           
+            }         
             .gform_validation_container {
                 display: none;
                 
@@ -389,7 +382,8 @@ option {padding:.25em .5em;}
             width: 100%;
             .gform_fields {
                 .gfield {
-                    width:223px;
+                    width:250px;
+                    margin-bottom: 20px;
                     float: left;
                     &.gfield_html {
 	                    margin-top: 40px;
@@ -403,17 +397,23 @@ option {padding:.25em .5em;}
                        margin-top: 0;
                     } 
 					&#field_1_3 {
-                       margin-left: -335px;
-                       margin-top: 67px;
-                    } 
-					&#field_1_4 {
-                       margin-left: -335px;
-                       margin-top: 134px;
+                       margin-left: 64px;
                     }   
  					&#field_1_5 {
-                       margin-left: -335px;
-                       margin-top: 201px;
-
+                       margin-left: 153px;
+                       margin-top: 15px;
+                       label {
+	                       text-align: center;
+                       }
+                       .gfield_description {
+	                       text-align: center;
+                       }
+                    }  
+                    &#field_1_7 {
+                       margin-top:10px;
+                    } 
+                    &#field_1_8 {
+                       margin-left: 64px;
                     }  
                     
                     /* Project Planner form fields specifics */
@@ -451,8 +451,8 @@ option {padding:.25em .5em;}
                     } 
                     
                     &.textarea {
-	                    margin-left: 350px;
-	                    margin-top: -274px;
+	                    width:100%;
+	                    margin-top: 10px;
 	                    height:auto;
 	                    .ginput_container {
 		                    height:auto;
@@ -469,15 +469,20 @@ option {padding:.25em .5em;}
                         
     					&.ginput_container_radio {
 	    					width:auto;
-	    					margin-bottom: 5px;
+	    					margin-bottom: 0;
 	    					height:46px;
 	    					ul {
 		    					
 		    					li {
-			    					width:223px;
+			    					width:250px;
 			    					label {
-				    					width:223px;
+				    					width:250px;
+				    					margin-bottom: 0;
 			    					}		
+
+			    					&.gchoice_1_1_1 {
+				    					margin-left: 64px;
+			    					}
 			    					
 			    					&.gchoice_2_7_1,
 			    					&.gchoice_2_7_2,
@@ -502,6 +507,7 @@ option {padding:.25em .5em;}
         }
     }
     /* Contact page adjustments to the form */
+/*
     .contact-page {
 	    .gform_wrapper {
 		    padding-left: 0;
@@ -534,16 +540,25 @@ option {padding:.25em .5em;}
 			}
 		}
     }
+*/
 	
 }
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: $screen-md-min) { 
 
     .gform_wrapper {
+	    padding-left: 35px;
+	    padding-right:35px;
         .gform_body {
-			padding-left: 28px;
+	        
 			 .gform_fields {
                 .gfield {
+	                width:320px;
+	                
+	                &#field_1_5 {
+		                margin-left: 188px;
+	                }
+	                
                     &#field_2_4,
                     &#field_2_5 {
 	                    margin-left: 20px;
@@ -553,7 +568,10 @@ option {padding:.25em .5em;}
 	    					ul {
 		    					
 		    					li {	
-			    					
+			    					width:320px;
+			    					label {
+				    					width:320px;
+			    					}
 			    					&.gchoice_2_7_1,
 			    					&.gchoice_2_7_2,
 			    					&.gchoice_2_11_1,
@@ -569,8 +587,6 @@ option {padding:.25em .5em;}
 	        }
         }
     }
-    
-
 
     
 }
@@ -585,38 +601,18 @@ option {padding:.25em .5em;}
                 .gfield {
                     width:268px;
                     
+                    &#field_1_6 {
+	                   width:100%; 
+                    }
+					&#field_1_7 {
+						 width:100%;
+					 }                
                     &#field_2_4,
                     &#field_2_5 {
                        margin-left: 48px;
                        margin-top: 0;
                     } 
 
-                    &#field_1_1 {
-                       width:100%;
-                    } 
-                    &#field_1_2 {
-                       margin-left: 0;
-                       margin-top: 0;
-                    } 
-					&#field_1_3 {
-                       margin-left: -450px;
-
-                    } 
-					&#field_1_4 {
-                       margin-left: -450px;
-                    }   
- 					&#field_1_5 {
-                       margin-left: -450px;
-
-                    }   
-                    &.textarea {
-	                    margin-left: 465px;
-	                    .ginput_container {
-		                    textarea {
-    							height:174px;
-    						}
-    					}
-                    }
                     .ginput_container {
                         
     					&.ginput_container_radio {
@@ -643,6 +639,40 @@ option {padding:.25em .5em;}
         }
 
     }  
+    #gform_wrapper_1 {
+        .gform_body {
+            .gform_fields {
+                .gfield {
+                    width:308px;
+
+                    .ginput_container {
+                     
+
+                     
+    					&.ginput_container_radio {
+
+	    					ul {
+		    					li {
+			    					width:308px;
+			    					label {
+				    					width:308px;
+			    					}		
+			    					&.gchoice_2_7_1,
+			    					&.gchoice_2_7_2,
+			    					&.gchoice_2_11_1,
+			    					&.gchoice_2_11_2 {
+				    					margin-left: 48px;
+			    					}	    					
+		    					}
+	    					}
+    					}
+                    }           
+                }
+
+            }
+        }
+
+    }  
 }
 
 
@@ -651,21 +681,19 @@ option {padding:.25em .5em;}
 @media (min-width: $screen-xlg-min) {
 	
     .gform_wrapper {
-	    padding-right: 0;
-	    padding-left: 0;
         .gform_body {
             .gform_fields {
                 .gfield {
+
+					 &#field_1_6 {
+						 margin-left: 0;
+					 }
 
                     &#field_2_4,
                     &#field_2_5 {
                        margin-left: 37px;
                     } 
                     
-                    &#field_1_2 {
-                       margin-left: 80px;
-                    } 
-
                     &.textarea {
 	                    margin-left: 550px;
                     }
@@ -688,5 +716,10 @@ option {padding:.25em .5em;}
 				}
 			}
 		}
+	}
+	#gform_wrapper_1 {
+		width: 750px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }

@@ -42,7 +42,9 @@ var
             },
             scripts: {
                 dir: themeDevelopment + '/js',
-                src: themeDevelopment + '/js/**/*.js',
+                dircombined: themeDevelopment + '/js/combined',
+                src: themeDevelopment + '/js/*.js',
+                srccombined: themeDevelopment + '/js/combined/**/*.js',
                 dest: themeRoot + '/js',
             },
             svgIcons: {
@@ -53,8 +55,7 @@ var
                 src: themeDevelopment + '/images',
                 dest: themeRoot + '/images',
                 icon: themeDevelopment + '/meta/mfos-meta-icon.png',
-            }
-          
+            }    
     };
 
 
@@ -120,22 +121,36 @@ gulp.task('styles', function() {
 });
 
 
+
+
+/*
+* Scripts
+*/
+gulp.task('scripts.single', function() {
+	return gulp
+		.src(paths.scripts.src)
+		.pipe(plugins.sourcemaps.init())
+		.pipe(plugins.changed(paths.scripts.dest))
+		.pipe(plugins.uglify())
+		.pipe(plugins.rename({
+			suffix: ".min" 
+			}))
+		.pipe(plugins.sourcemaps.write('.'))
+		.pipe(gulp.dest(paths.scripts.dest));
+});
+
+
 /*
 * Scripts
 */
 gulp.task('scripts.all', function() {
 	return gulp
 		.src([
-			//paths.scripts.dir + '/svgeezy.min.js',
-			//paths.scripts.dir + '/bootstrap.js',
-			//paths.scripts.dir + '/skip-link-focus-fix.js',
-			//paths.scripts.dir + '/modernizr.custom.js',
-			//paths.scripts.dir + '/scrollToPlugin.min.js',
-    		paths.scripts.dir + '/ScrollMagic.js',
-    		paths.scripts.dir + '/animation.gsap.js',
-			paths.scripts.dir + '/jquery.easing.1.3.js',
-			paths.scripts.dir + '/jquery.easing.compatibility.js',
-			paths.scripts.dir + '/global.js'
+    		paths.scripts.dircombined + '/ScrollMagic.js',
+    		paths.scripts.dircombined + '/animation.gsap.js',
+			paths.scripts.dircombined + '/jquery.easing.1.3.js',
+			paths.scripts.dircombined + '/jquery.easing.compatibility.js',
+			paths.scripts.dircombined + '/global.js'
 			
 		])
 		.pipe(plugins.sourcemaps.init())
@@ -149,9 +164,8 @@ gulp.task('scripts.all', function() {
 
 
 gulp.task('scripts', ['scripts.all'], function() {
-	gulp.start('scripts.all');
+	gulp.start('scripts.all', 'scripts.single');
 });
-
 
 /*
 * SVG Sprites
@@ -230,7 +244,7 @@ gulp.task('themebuild', function(done) {
     runSequence('svg-icon-sprite', 'styles', 'scripts', 'images', function() {
         done();
     });
-   
+ 
 });
 
 
@@ -254,10 +268,9 @@ gulp.task('watch',  function() {
 	gulp.watch(paths.images.src + '/imgs/*', ['images']);
 	gulp.watch(paths.styles.src, ['styles']);
 	gulp.watch(paths.scripts.src, ['scripts']);
-    gulp.watch(paths.svgIcons.src, ['svg-icon-sprite']);
-        
+	gulp.watch(paths.scripts.srccombined, ['scripts.all']);
+	gulp.watch(paths.svgIcons.src, ['svg-icon-sprite']);        
 });
-
 
 /*
 * Default task, will simply output the tasks that are available

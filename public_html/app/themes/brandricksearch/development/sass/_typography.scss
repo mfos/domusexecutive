@@ -152,8 +152,8 @@ h4 {
 @media (min-width: $screen-sm-min) {
 
     h1 {
-    	@include font-size(5);
-    	@include line-height(5.6);	
+    	@include font-size(4.1);
+    	@include line-height(4.7);	
     }
 	.lead-large {
 		@include font-size(2.4);
@@ -166,8 +166,8 @@ h4 {
 @media (min-width: $screen-md-min) { 
 
     h1 {
-    	@include font-size(6);
-    	@include line-height(6.6);	
+    	@include font-size(5.4);
+    	@include line-height(6.4);	
     }
 
 }
@@ -175,10 +175,7 @@ h4 {
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: $screen-lg-min) {
 	
-    h1 {
-    	@include font-size(8);
-    	@include line-height(8.6);	
-    }
+
 }
 
 /* Large devices (large desktops, 1400px and up) */

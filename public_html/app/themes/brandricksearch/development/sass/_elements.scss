@@ -86,7 +86,7 @@ button {
     @include line-height(1.4);
     width:100px;
 	&::after {
-		width:100px;
+		width:30%;
 		height:1px;
 		z-index: 99;
 		bottom:-5px;
