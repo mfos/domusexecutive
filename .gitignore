@@ -11,7 +11,7 @@
 !composer.json
 !composer.lock
 !vendor/autoload.php
-!public/app/themes/every1roots/
+!public/app/themes/brandricksearch/
 
 
 *.DS_Store
@@ -25,9 +25,10 @@ public_html/app/plugins/*
 public_html/app/themes/index.php
 public_html/app/uploads
 !public_html/app/uploads/index.php
-public_html/app/themes/every1roots/css
-public_html/app/themes/every1roots/js
-public_html/app/themes/every1roots/development/vendor
+public_html/app/themes/brandricksearch/css
+public_html/app/themes/brandricksearch/js
+public_html/app/themes/brandricksearch/images
+public_html/app/themes/brandricksearch/development/vendor
 composer.phar
 config/
 config/wp-config.default.php    
@@ -38,4 +39,3 @@ config/wp-config.php
 config/wp-config.staging.php
 !public_html/app/cache/index.html
 public_html/app/cache/*
-config/
