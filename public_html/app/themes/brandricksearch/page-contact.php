@@ -21,7 +21,7 @@ get_header(); ?>
 				    {yoast_breadcrumb('<p id="breadcrumbs">','</p>');} ?>
 					</div>
 					
-					<p>Please use our form below to contact us. Alternatively you can call, email or even send us a letter.</p>
+					<?php the_field('top_content'); ?>
 				</div>
 			</div>
 		</div>

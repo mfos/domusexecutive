@@ -199,23 +199,6 @@ div.anim-section {
    
 }
    
-.hero-img-wrapper {
-	position: relative;
-	img {
-		width:100%;
-	}
-	.img-title-container {
-		width:100%;
-		position: relative;
-	}
-	h1 {
-		position: absolute;
-		bottom: 0;
-		left:15px;
-		color: #ffffff;
-	}
-}
-
 
 /********* FOOTER **********/
 
@@ -324,6 +307,11 @@ div.anim-section {
 			@include line-height(2.8);
 		}
 	}	
+		
+		
+	.middle-section {
+		padding-top: 30px;
+	}
 		
 	.accordion {
 	    list-style: none;
@@ -584,11 +572,7 @@ and (orientation : portrait) {
 
 
 	/********* HEADER **********/
-	.hero-img-wrapper {
-		h1 {
-			bottom: 20px;
-		}
-	}
+
 
 }
 
@@ -649,16 +633,7 @@ and (orientation : portrait) {
 		}
 		
 	}
-	.hero-img-wrapper {
-		.img-title-container {
-			width:647px;
-			margin-left: auto;
-			margin-right: auto;
-			h1 {
-				
-			}
-		}
-	}
+
 	/********* FOOTER **********/
 	#footer-wrapper {
 		padding: 15px 0;
@@ -826,14 +801,7 @@ and (orientation : portrait) {
 			}
 		}
 	} 
-	.hero-img-wrapper {
-		.img-title-container {
-			width:816px;
-			h1 {
-				
-			}
-		}
-	}
+
 	/********* FOOTER **********/
 
 	#footer-wrapper {
@@ -857,7 +825,7 @@ and (orientation : portrait) {
 	/********* INTERNAL PAGE STRUCTURE **********/
 	
 	.internal-page {
-		padding-top: 20px;
+		padding-top: 0;
 		.head-top-section {
 			padding: 25px 0;
 
@@ -945,23 +913,7 @@ and (orientation : portrait) {
 @media (min-width: $screen-lg-min) {
 
  	/********* HEADER **********/
- 	.hero-img-wrapper {
-	 	height:350px;
-		overflow: hidden;
-		position: relative;
-		left:0;
-		right:0;
-		.img-title-container {
-			width:655px;
-			position: absolute;
-			top:370px;
-			left:0;
-			right:0;
-			h1 {
-				
-			}
-		}
-	}
+
 	.front-page {
 		.text-float {
 			.text-inner {
@@ -981,11 +933,7 @@ and (orientation : portrait) {
 @media (min-width: $screen-xlg-min) {
 
 	/********* HEADER **********/
-	.hero-img-wrapper {
-		 .img-title-container {
-			 width: 920px;
-		 }
-	}
+
 	.front-page {
 		.text-float {
 			.text-inner {
@@ -1017,11 +965,7 @@ and (orientation : portrait) {
 	}
 	
    .page-candidates {
-	   .hero-img-wrapper {
-		   img {
-			   margin-top: -100px;
-		   }
-	   }
+
    }
 
 }
