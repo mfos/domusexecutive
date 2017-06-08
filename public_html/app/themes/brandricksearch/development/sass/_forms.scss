@@ -289,6 +289,13 @@ option {padding:.25em .5em;}
 						height:auto;
 					}
                 }
+                
+                &#field_2_7,
+                &#field_2_11 {
+	                .ginput_container {
+		                height:165px;
+	                }
+                }
 
 
             }         
@@ -426,18 +433,25 @@ option {padding:.25em .5em;}
                     &#field_2_3 {
                        margin-left: 0;
                        margin-top: 0;
+                       width:223px;
                     } 
                     &#field_2_4 {
                        margin-left: 10px;
+                       width:223px;
                     } 
                     &#field_2_5 {
                        margin-left: 10px;
                        margin-top: 0;
+                       width:223px;
                     }
                     &#field_2_7 {
 	                   width:100%;
                        margin-left: 0;
                        margin-top: 0;
+                       .ginput_container {
+	                    	height:50px;   
+                       }
+                      
                     } 
                     &#field_2_9 {
 	                   width:100%;
@@ -445,11 +459,14 @@ option {padding:.25em .5em;}
                        margin-top: 0;
                     } 
                     &#field_2_11 {
-	                     width:100%;
+	                   width:100%;
                        margin-left: 0;
                        margin-top: 0;
+                       .ginput_container {
+	                    	height:50px;   
+                       }
                     } 
-                    
+                 
                     &.textarea {
 	                    width:100%;
 	                    margin-top: 10px;
@@ -474,9 +491,9 @@ option {padding:.25em .5em;}
 	    					ul {
 		    					
 		    					li {
-			    					width:250px;
+			    					width:223px;
 			    					label {
-				    					width:250px;
+				    					width:223px;
 				    					margin-bottom: 0;
 			    					}		
 
@@ -484,11 +501,13 @@ option {padding:.25em .5em;}
 				    					margin-left: 64px;
 			    					}
 			    					
+			    					
 			    					&.gchoice_2_7_1,
 			    					&.gchoice_2_7_2,
 			    					&.gchoice_2_11_1,
 			    					&.gchoice_2_11_2 {
 				    					margin-left: 10px;
+				    					
 			    					}				
 		    					}
 	    					}
@@ -506,41 +525,7 @@ option {padding:.25em .5em;}
             }
         }
     }
-    /* Contact page adjustments to the form */
-/*
-    .contact-page {
-	    .gform_wrapper {
-		    padding-left: 0;
-		    padding-right: 0;
-		    .gform_body {
-			    padding-left: 0;
-			    padding-right: 50px;
-			    .gform_fields {
-				    .gfield {
-					    width:100%;
-					    margin-left: 0 !important;
-						margin-top: 0 !important; 
-					    &.textarea {
-					    	margin-left: 0;
-							margin-top: 0; 
-				    	} 
-				    	.ginput_container {
-					    	&.ginput_container_radio {
-						    	width:100%;
-					    	}
-					    	input {
-						    	width:100%;
-					    	}
-					    }
-					}
-				}
-			}
-			.gform_footer {
-				text-align: left;
-			}
-		}
-    }
-*/
+
 	
 }
 /* Medium devices (desktops, 992px and up) */
@@ -563,6 +548,7 @@ option {padding:.25em .5em;}
                     &#field_2_5 {
 	                    margin-left: 20px;
 	                }
+
 	                .ginput_container {
 			            &.ginput_container_radio {
 	    					ul {
@@ -587,7 +573,30 @@ option {padding:.25em .5em;}
 	        }
         }
     }
-
+	#gform_wrapper_2 {
+		padding-left:34px;
+		padding-right: 34px;
+        .gform_body {
+			 .gform_fields {
+                .gfield {
+	                .ginput_container {
+			            &.ginput_container_radio {
+	    					ul {
+		    					li {	
+			    					width:223px;
+			    					label {
+				    					width:223px;
+				    				}
+				    			}
+				    		}
+				    	}
+				    }
+				 }
+			}
+		}
+				 
+				    				
+	}
     
 }
 
@@ -673,6 +682,11 @@ option {padding:.25em .5em;}
         }
 
     }  
+    #gform_wrapper_2 {
+		width:840px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 
@@ -721,5 +735,8 @@ option {padding:.25em .5em;}
 		width: 750px;
 		margin-left: auto;
 		margin-right: auto;
+	}
+	#gform_wrapper_2 {
+		width:812px;
 	}
 }

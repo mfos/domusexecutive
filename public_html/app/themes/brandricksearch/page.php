@@ -9,28 +9,24 @@
 get_header(); ?>
 
 
-<?php 
-//$post = the_post();
-if(isset($post->ID)) {
-	$postId            = $post->ID;
-	$headerImageUrl    = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
-	$thumb_id          = get_post_thumbnail_id($postId);
-	$alt               = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
-}
-?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	
-	<?php if ($headerImageUrl): ?>
-	<div class="hero-img-wrapper">
-		<img src="<?php echo $headerImageUrl[0] ?>"  alt="<?php echo $alt ?>" >
-			<div class="img-title-container">
-						<h1 class="animated fadeInUp"><?php the_title(); ?> </h1>
-			</div>			
-		
 
-	</div>
-	<?php endif; ?>
+	<div class="head-top-section light anim-section">
+	    <div class="container">
+			<div class="row">
+				<div class="col-sm-10 col-sm-offset-1  col-md-10 col-md-offset-1 col-lg-offset-2 col-lg-8">
+					<h1 class="animated fadeInUp"><?php the_title(); ?> </h1>
+					<div id="bread-container" >
+				    	<?php if ( function_exists('yoast_breadcrumb') ) 
+				    {yoast_breadcrumb('<p id="breadcrumbs">','</p>');} ?>
+					</div>
+					
+					<p>Please use our form below to contact us. Alternatively you can call, email or even send us a letter.</p>
+				</div>
+			</div>
+		</div>
+    </div>
 
 	<div class="page-wrapper internal-page anim-section">
 	

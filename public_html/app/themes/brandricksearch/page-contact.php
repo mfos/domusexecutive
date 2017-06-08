@@ -15,7 +15,7 @@ get_header(); ?>
 	    <div class="container">
 			<div class="row">
 				<div class="col-sm-10 col-sm-offset-1  col-md-10 col-md-offset-1 col-lg-offset-2 col-lg-8">
-					<h1>How to get in touch</h1>
+					<h1 class="animated fadeInUp">How to get in touch</h1>
 					<div id="bread-container" >
 				    	<?php if ( function_exists('yoast_breadcrumb') ) 
 				    {yoast_breadcrumb('<p id="breadcrumbs">','</p>');} ?>
@@ -46,7 +46,7 @@ get_header(); ?>
 		    	<div class="col-sm-6">
 			    	<div class="contact-info">
 				    	<h3>Head office</h3>
-				    	
+				    	<hr>
 				    	<ul>
 					    	<li>1, (5 & 6) Princes Court,</li>
 					    	<li>Silver Street,</li>
@@ -61,12 +61,12 @@ get_header(); ?>
 					    	<li>EMAIL: contact@brandricksearch.com</li>
 				    	</ul>
 			    	</div>
-			    	<div id="map-canvas-ramsbottomoffice" class="map-container">
+			    	<div id="map-canvas-ramsbottomoffice" class="map-container"></div>
 		    	</div>
 		    	<div class="col-sm-6">
 			    	<div class="contact-info">
 				    	<h3>Maidenhead office</h3>
-				    	
+				    	<hr>
 				    	<ul>
 					    	<li>Suite 9,  Second Floor,</li>
 					    	<li>110 High Street,</li>
@@ -81,7 +81,7 @@ get_header(); ?>
 					    	<li>EMAIL: contact@brandricksearch.com</li>
 				    	</ul>
 			    	</div>
-			    	<div id="map-canvas-maidenheadoffice" class="map-container">
+			    	<div id="map-canvas-maidenheadoffice" class="map-container"></div>
 		    	</div>
 			</div>
 	    </div>

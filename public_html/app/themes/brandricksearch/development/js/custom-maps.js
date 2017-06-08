@@ -1,6 +1,173 @@
+var styledMapType = new google.maps.StyledMapType(
+		  	[
+			  {
+			    "elementType": "geometry",
+			    "stylers": [
+			      {
+			        "color": "#f5f5f5"
+			      }
+			    ]
+			  },
+			  {
+			    "elementType": "labels.icon",
+			    "stylers": [
+			      {
+			        "visibility": "off"
+			      }
+			    ]
+			  },
+			  {
+			    "elementType": "labels.text.fill",
+			    "stylers": [
+			      {
+			        "color": "#616161"
+			      }
+			    ]
+			  },
+			  {
+			    "elementType": "labels.text.stroke",
+			    "stylers": [
+			      {
+			        "color": "#f5f5f5"
+			      }
+			    ]
+			  },
+			  {
+			    "featureType": "administrative.land_parcel",
+			    "elementType": "labels.text.fill",
+			    "stylers": [
+			      {
+			        "color": "#bdbdbd"
+			      }
+			    ]
+			  },
+			  {
+			    "featureType": "poi",
+			    "elementType": "geometry",
+			    "stylers": [
+			      {
+			        "color": "#eeeeee"
+			      }
+			    ]
+			  },
+			  {
+			    "featureType": "poi",
+			    "elementType": "labels.text.fill",
+			    "stylers": [
+			      {
+			        "color": "#757575"
+			      }
+			    ]
+			  },
+			  {
+			    "featureType": "poi.park",
+			    "elementType": "geometry",
+			    "stylers": [
+			      {
+			        "color": "#e5e5e5"
+			      }
+			    ]
+			  },
+			  {
+			    "featureType": "poi.park",
+			    "elementType": "labels.text.fill",
+			    "stylers": [
+			      {
+			        "color": "#9e9e9e"
+			      }
+			    ]
+			  },
+			  {
+			    "featureType": "road",
+			    "elementType": "geometry",
+			    "stylers": [
+			      {
+			        "color": "#ffffff"
+			      }
+			    ]
+			  },
+			  {
+			    "featureType": "road.arterial",
+			    "elementType": "labels.text.fill",
+			    "stylers": [
+			      {
+			        "color": "#757575"
+			      }
+			    ]
+			  },
+			  {
+			    "featureType": "road.highway",
+			    "elementType": "geometry",
+			    "stylers": [
+			      {
+			        "color": "#dadada"
+			      }
+			    ]
+			  },
+			  {
+			    "featureType": "road.highway",
+			    "elementType": "labels.text.fill",
+			    "stylers": [
+			      {
+			        "color": "#616161"
+			      }
+			    ]
+			  },
+			  {
+			    "featureType": "road.local",
+			    "elementType": "labels.text.fill",
+			    "stylers": [
+			      {
+			        "color": "#9e9e9e"
+			      }
+			    ]
+			  },
+			  {
+			    "featureType": "transit.line",
+			    "elementType": "geometry",
+			    "stylers": [
+			      {
+			        "color": "#e5e5e5"
+			      }
+			    ]
+			  },
+			  {
+			    "featureType": "transit.station",
+			    "elementType": "geometry",
+			    "stylers": [
+			      {
+			        "color": "#eeeeee"
+			      }
+			    ]
+			  },
+			  {
+			    "featureType": "water",
+			    "elementType": "geometry",
+			    "stylers": [
+			      {
+			        "color": "#c9c9c9"
+			      }
+			    ]
+			  },
+			  {
+			    "featureType": "water",
+			    "elementType": "labels.text.fill",
+			    "stylers": [
+			      {
+			        "color": "#9e9e9e"
+			      }
+			    ]
+			  }
+			],
+			{name: 'Styled Map'});
+
+
+
+
+
 function ramsbottomOffice() {
 		
-		var myLatlng = new google.maps.LatLng(53.338058,-2.973872); // Add the coordinates
+		var myLatlng = new google.maps.LatLng(53.647947,-2.317434); // Add the coordinates
 		var mapOptions = {
 			zoom: 14, // The initial zoom level when your map loads (0-20)
 			minZoom: 6, // Minimum zoom level allowed (0-20)
@@ -22,7 +189,11 @@ function ramsbottomOffice() {
 	  	}
 		var map = new google.maps.Map(document.getElementById('map-canvas-ramsbottomoffice'), mapOptions); // Render our map within the empty div
 		
-		var image = new google.maps.MarkerImage("/wp-content/themes/penkethgroup/images/penkethMarker.png", null, null, null, new google.maps.Size(48,60)); // Create a variable for our marker image.
+		map.mapTypes.set('styled_map', styledMapType);
+        map.setMapTypeId('styled_map');
+        map.panBy(0, -30);
+		
+		var image = new google.maps.MarkerImage("/app/themes/brandricksearch/images/brMapMarker.png", null, null, null, new google.maps.Size(48,60)); // Create a variable for our marker image.
 			
 		var marker = new google.maps.Marker({ // Set the marker
 			position: myLatlng, // Position marker to coordinates
@@ -46,7 +217,7 @@ function ramsbottomOffice() {
 	}
 function maidenheadOffice() {
 		
-		var myLatlng = new google.maps.LatLng(53.478954,-2.238727); // Add the coordinates
+		var myLatlng = new google.maps.LatLng(51.522688,-0.723252); // Add the coordinates
 		var mapOptions = {
 			zoom: 14, // The initial zoom level when your map loads (0-20)
 			minZoom: 6, // Minimum zoom level allowed (0-20)
@@ -66,9 +237,13 @@ function maidenheadOffice() {
 			overviewMapControl:false, // Set to false to remove overview control
 			rotateControl:false // Set to false to disable rotate control
 	  	}
-		var map = new google.maps.Map(document.getElementById('map-canvas-maidenheadoffice'), mapOptions); // Render our map within the empty div
+	  	var map = new google.maps.Map(document.getElementById('map-canvas-maidenheadoffice'), mapOptions); // Render our map within the empty div
 		
-		var image = new google.maps.MarkerImage("/wp-content/themes/penkethgroup/images/penkethMarker.png", null, null, null, new google.maps.Size(48,60)); // Create a variable for our marker image.
+		map.mapTypes.set('styled_map', styledMapType);
+        map.setMapTypeId('styled_map');
+        map.panBy(0, -30);
+		
+		var image = new google.maps.MarkerImage("/app/themes/brandricksearch/images/brMapMarker.png", null, null, null, new google.maps.Size(48,60)); // Create a variable for our marker image.
 			
 		var marker = new google.maps.Marker({ // Set the marker
 			position: myLatlng, // Position marker to coordinates
@@ -82,7 +257,7 @@ function maidenheadOffice() {
 		// 	});
 		
 		var infowindow = new google.maps.InfoWindow({ // Create a new InfoWindow
-  			content:'<div class="map-content"><div class="mc-address"><span>Penketh Group</span><p>8th Floor<br>Neo Building</br>9 Charlotte Street<br>Manchester, M1 4ET</p></div><div class="mc-image clearfix"><img src="/wp-content/themes/penkethgroup/images/head-mapinfo.png" alt="Map Info Image"></div></div>' 
+  			content:'' 
   			// HTML contents of the InfoWindow
   		});
 		google.maps.event.addListener(marker, 'click', function() { // Add a Click Listener to our marker
@@ -91,6 +266,7 @@ function maidenheadOffice() {
 		
 		google.maps.event.addDomListener(window, 'resize', function() { map.setCenter(myLatlng); }); // Keeps the Pin Central when resizing the browser on responsive sites
 	}	
+	
 	
 	
 	google.maps.event.addDomListener(window, 'load', ramsbottomOffice); // Execute our 'initialise' function once the page has loaded. 
