@@ -121,18 +121,14 @@ h4 {
 .lead {
 	@include font-size(1.8);
 	@include line-height(3);	
+	color: #515151;
 }
 .lead-large {
 	@include font-size(2);
 	@include line-height(3.2);	
 }
 
-.internal-page {
-    .lead {
-    	@include font-size(2);
-    	@include line-height(3.2);        
-    }
-}
+
 
 .internal-page {
     h1, h2, h3, h4 {

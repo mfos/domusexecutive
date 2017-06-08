@@ -419,6 +419,9 @@ option {padding:.25em .5em;}
                     /* Project Planner form fields specifics */
                     &#field_2_1 {
                        margin-top: 0;
+                       p {
+	                       margin-bottom: 0;
+                       }
                     } 
                     &#field_2_3 {
                        margin-left: 0;
@@ -580,11 +583,11 @@ option {padding:.25em .5em;}
 			padding-left: 0;
             .gform_fields {
                 .gfield {
-                    width:278px;
+                    width:268px;
                     
                     &#field_2_4,
                     &#field_2_5 {
-                       margin-left: 40px;
+                       margin-left: 48px;
                        margin-top: 0;
                     } 
 
@@ -620,15 +623,15 @@ option {padding:.25em .5em;}
 
 	    					ul {
 		    					li {
-			    					width:278px;
+			    					width:268px;
 			    					label {
-				    					width:278px;
+				    					width:268px;
 			    					}		
 			    					&.gchoice_2_7_1,
 			    					&.gchoice_2_7_2,
 			    					&.gchoice_2_11_1,
 			    					&.gchoice_2_11_2 {
-				    					margin-left: 40px;
+				    					margin-left: 48px;
 			    					}	    					
 		    					}
 	    					}
@@ -648,10 +651,17 @@ option {padding:.25em .5em;}
 @media (min-width: $screen-xlg-min) {
 	
     .gform_wrapper {
+	    padding-right: 0;
+	    padding-left: 0;
         .gform_body {
             .gform_fields {
                 .gfield {
 
+                    &#field_2_4,
+                    &#field_2_5 {
+                       margin-left: 37px;
+                    } 
+                    
                     &#field_1_2 {
                        margin-left: 80px;
                     } 
@@ -659,6 +669,22 @@ option {padding:.25em .5em;}
                     &.textarea {
 	                    margin-left: 550px;
                     }
+                    .ginput_container {
+                        
+    					&.ginput_container_radio {
+
+	    					ul {
+		    					li {	
+			    					&.gchoice_2_7_1,
+			    					&.gchoice_2_7_2,
+			    					&.gchoice_2_11_1,
+			    					&.gchoice_2_11_2 {
+				    					margin-left: 37px;
+			    					}	    					
+		    					}
+	    					}
+    					}
+                    }  
 				}
 			}
 		}

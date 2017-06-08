@@ -172,21 +172,25 @@ div.anim-section {
 				margin-left: 15px;
 				margin-right: 15px;
 				padding-bottom: 0;
-			    @include animation(1s, 1.5s, fadeIn)
+			    @include animation(1s, 1.5s, fadeIn);
+			    span {
+				    color: $color-green-tint;
+				    display: inline-block;
+			    }
 		    }
-			span {
+			.subtitle {
 				@include font-size(1.3);
 				@include line-height(1.5);
 				color: #909090;
 				margin-left: 15px;
 				margin-right: 15px;
-				@include animation(2s, 1.5s, fadeIn)
+				@include animation(2s, 1.5s, fadeIn);
 			}		    
 			hr {
 				margin-left: 15px;
 				width:170px;
 				height:1px;
-				@include animation(2.5s, 1.5s, fadeIn)
+				@include animation(2.5s, 1.5s, fadeIn);
 			}		    
 	    }
 	    
@@ -309,9 +313,11 @@ div.anim-section {
 				content: none;
 			}
 	        a.toggle {
+				@include font-size(1.8);
+				@include line-height(3);
 	            width: 100%;
 	            display: block;
-	            color: #000000;
+	            color: #515151;
 	            margin-left: -14px;
 	            margin-bottom: 5px;
 	            padding: .75em;
@@ -387,7 +393,7 @@ div.anim-section {
 
 .service-grid {
 	margin-top: 40px;
-	@include animation(3s, 1.5s, fadeIn)
+	@include animation(3s, 1.5s, fadeIn);
 	.service-grid-item {
 		width:100%;
 		padding: 10px 15px;
@@ -494,7 +500,7 @@ body.home {
 
 	/********* COMMON ELEMENTS **********/
 	#contact-footer-form {
-		padding: 40px 0 50px 0;
+		padding: 70px 0 60px 0;
 	}
   
   	/********* HEADER **********/
@@ -560,6 +566,7 @@ body.home {
 	
 	
 	.internal-page {
+		padding-bottom: 60px;
 		.accordion {
 			width:500px;
 			margin-top: 30px;
@@ -778,7 +785,7 @@ body.home {
 						@include font-size(4.6);
 						@include line-height(4.6); 
 					 }	
-					 span {
+					 .subtitle {
 						@include font-size(1.5);
 						@include line-height(2.4); 
 					 }
@@ -798,15 +805,15 @@ body.home {
 
  	/********* HEADER **********/
  	.hero-img-wrapper {
-	 	height:400px;
+	 	height:350px;
 		overflow: hidden;
 		position: relative;
 		left:0;
 		right:0;
 		.img-title-container {
-			width:980px;
+			width:780px;
 			position: absolute;
-			top:410px;
+			top:370px;
 			left:0;
 			right:0;
 			h1 {
@@ -822,7 +829,7 @@ body.home {
 	/********* HEADER **********/
 	.hero-img-wrapper {
 		 .img-title-container {
-			 width: 1147px;
+			 width: 920px;
 		 }
 	}
    .page-candidates {

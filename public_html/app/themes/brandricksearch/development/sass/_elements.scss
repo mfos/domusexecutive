@@ -176,12 +176,12 @@ article.page {
             margin-bottom: 3px;
             position: relative;
             @include font-size(1.8);
-            @include line-height(2.8)
+            @include line-height(2.8);
             &::before {
                 content: "• ";
                 color: #000000;
 				@include font-size(4);
-				@include line-height(4)
+				@include line-height(4);
                 position: absolute;
                 left: -40px;
                 top: -7px;

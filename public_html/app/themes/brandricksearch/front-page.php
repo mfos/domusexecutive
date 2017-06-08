@@ -15,9 +15,9 @@ get_header(); ?>
 	    <div class="text-float">
 		    <div class="text-inner">
 			    <div class="text-container">
-			   		<h1 class="visible-xs-block">Experienced.<br>professional.<br>discrete.</h1>
-			   		<h1 class="hidden-xs">Experienced.professional.discrete.</h1>
-			   		<span class="animated fadeIn">Candidate search & client services</span>
+			   		<h1 class="visible-xs-block">Planning.<br>Control.<br><span>Precision.</span></h1>
+			   		<h1 class="hidden-xs">Planning.Control.<span>Precision.</span></h1>
+			   		<span class="animated fadeIn subtitle">Executive search and talent consulting.</span>
 			   		<hr class="animated fadeIn">
 			    </div>
 			    <div class="service-grid animated">
