@@ -47,3 +47,4 @@ config/wp-config.php
 config/wp-config.staging.php
 !public_html/app/cache/index.html
 public_html/app/cache/*
+config/
