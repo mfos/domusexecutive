@@ -169,12 +169,16 @@ h4 {
     	@include font-size(5.4);
     	@include line-height(6.4);	
     }
-
+	
 }
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: $screen-lg-min) {
 	
+	p {
+		@include font-size(1.7);
+		@include line-height(2.9);
+	}
 
 }
 

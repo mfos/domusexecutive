@@ -2,9 +2,19 @@
 	background: url("../images/sprite.svg") no-repeat;
 }
 
-.svg-down-arrow-grey {
+.svg-bullet-arrow {
 	@extend %svg-common;
 	background-position: 0 0;
+}
+
+.svg-bullet-arrow-dims {
+	width: 25px;
+	height: 14px;
+}
+
+.svg-down-arrow-grey {
+	@extend %svg-common;
+	background-position: 21.008403361344538% 12.844036697247706%;
 }
 
 .svg-down-arrow-grey-dims {
@@ -14,7 +24,7 @@
 
 .svg-form-validate {
 	@extend %svg-common;
-	background-position: 23.655913978494624% 15.294117647058824%;
+	background-position: 39.83050847457627% 27.272727272727273%;
 }
 
 .svg-form-validate-dims {
@@ -24,7 +34,7 @@
 
 .svg-menu-close {
 	@extend %svg-common;
-	background-position: 52.325581395348834% 46.15384615384615%;
+	background-position: 63.06306306306306% 54.34782608695652%;
 }
 
 .svg-menu-close-dims {
@@ -34,7 +44,7 @@
 
 .svg-menu-open {
 	@extend %svg-common;
-	background-position: 84.26966292134831% 75%;
+	background-position: 87.71929824561404% 78.43137254901961%;
 }
 
 .svg-menu-open-dims {

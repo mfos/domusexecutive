@@ -69,7 +69,5 @@
 	</div>
   </li>
 </ul>
-<?php endif; ?>
-
-    
+<?php endif; ?>  
    

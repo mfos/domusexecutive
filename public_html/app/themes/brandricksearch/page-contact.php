@@ -11,7 +11,7 @@ get_header(); ?>
 
 <div class="page-wrapper internal-page contact-page">
 
-	<div class="head-top-section light anim-section">
+	<div class="head-top-section dark anim-section">
 	    <div class="container">
 			<div class="row">
 				<div class="col-sm-10 col-sm-offset-1  col-md-10 col-md-offset-1 col-lg-offset-2 col-lg-8">

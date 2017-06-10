@@ -170,21 +170,21 @@ article.page {
     ul {
         margin: 27px 0;
         list-style: none;
-        padding-left: 60px;
+        padding-left: 80px;
     
         li {
-            margin-bottom: 3px;
+            margin-bottom: 10px;
             position: relative;
             @include font-size(1.8);
             @include line-height(2.8);
             &::before {
-                content: "• ";
+	            content: "";
+				@extend .svg-bullet-arrow;
+				@extend .svg-bullet-arrow-dims;
                 color: #000000;
-				@include font-size(4);
-				@include line-height(4);
                 position: absolute;
-                left: -40px;
-                top: -7px;
+                left: -63px;
+                top: 10px;
             }
         }
     }    

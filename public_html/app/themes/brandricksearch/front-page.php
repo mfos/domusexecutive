@@ -20,28 +20,7 @@ get_header(); ?>
 			   		<span class="animated fadeIn subtitle">Executive search and talent consulting.</span>
 			   		<hr class="animated fadeIn">
 			    </div>
-			    <div class="service-grid animated">
-				    <div class="service-grid-item">
-					    <a href="/">
-					    	<h2>Executive Search</h2>
-					    	 <div href="/" class="line-link hidden-xs" title="">Learn more</div>
-					    </a>
-		
-				    </div>
-				    <div class="service-grid-item">
-						<a href="/">
-							<h2>Mapping</h2>
-							 <div href="/" class="line-link hidden-xs" title="">Learn more</div>
-						</a>
-					    
-				    </div>
-				    <div class="service-grid-item">
-				    	<a href="/">
-							<h2>Consultancy</h2>
-							 <div href="/" class="line-link hidden-xs" title="">Learn more</div>
-				    	</a>
-				    </div>
-		    	</div>
+				<?php get_template_part( 'template-includes/service-link-blocks' ); ?>
 
 			    
 			    

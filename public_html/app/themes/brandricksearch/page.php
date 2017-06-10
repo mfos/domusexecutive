@@ -31,12 +31,10 @@ get_header(); ?>
 
 
 	
-	<div class="middle-section">    
+	<div class="middle-section anim-section">    
 	    <div class="container">
 		    <div class="row">
 		    	<div class="col-sm-10 col-sm-offset-1  col-md-10 col-md-offset-1 col-lg-offset-2 col-lg-8">
-	
-			    	
 					<?php // Show the selected frontpage content.
 					if ( have_posts() ) :
 						while ( have_posts() ) : the_post();
@@ -49,6 +47,35 @@ get_header(); ?>
 			</div>
 	    </div>
 	</div>
+
+
+	<?php if (is_page('what-we-do')): ?>
+		<?php get_template_part( 'template-includes/service-link-blocks' ); ?>
+	<?php endif; ?>
+
+	<?php if(have_rows('block_grid')): ?>  
+			<div class="block-grid animated">
+				<?php while ( have_rows('block_grid') ) : the_row(); ?>
+                
+	 		    <div class="block-grid-item">
+				    	<h3><?php the_sub_field('title'); ?></h3>
+				    	 <?php the_sub_field('copy'); ?>
+			    </div>
+
+				<?php endwhile; ?>
+			</div>
+	<?php endif; ?>           
+
+
+	<?php if(get_field('extra_copy_field')): ?>
+	    <div class="container">
+			<div class="row">
+				<div class="col-sm-10 col-sm-offset-1  col-md-10 col-md-offset-1 col-lg-offset-2 col-lg-8">
+						<?php the_field('extra_copy_field'); ?>
+				</div>
+			</div>
+		</div>
+	<?php endif; ?>
 
 
 </article>

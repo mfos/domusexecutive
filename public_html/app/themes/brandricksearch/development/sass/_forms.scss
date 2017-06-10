@@ -525,6 +525,26 @@ option {padding:.25em .5em;}
             }
         }
     }
+	#gform_wrapper_1 {
+        .gform_body {
+			 .gform_fields {
+                .gfield {
+	                .ginput_container {
+			            &.ginput_container_radio {
+	    					ul {
+		    					li {	
+			    					width:250px;
+			    					label {
+				    					width:250px;
+				    				}
+				    			}
+				    		}
+				    	}
+				    }
+				 }
+			}
+		}
+	}
 
 	
 }
@@ -573,6 +593,26 @@ option {padding:.25em .5em;}
 	        }
         }
     }
+	#gform_wrapper_1 {
+        .gform_body {
+			 .gform_fields {
+                .gfield {
+	                .ginput_container {
+			            &.ginput_container_radio {
+	    					ul {
+		    					li {	
+			    					width:320px;
+			    					label {
+				    					width:320px;
+				    				}
+				    			}
+				    		}
+				    	}
+				    }
+				 }
+			}
+		}
+	}
 	#gform_wrapper_2 {
 		padding-left:34px;
 		padding-right: 34px;
