@@ -32,10 +32,10 @@ get_header(); ?>
 			<div class="row">
 		    	<div class="col-sm-6">
 			    	<div class="contact-info">
-				    	<h3><span>Brandrick</span> Search Head office</h3>
+				    	<h3><span>Brandrick</span> Search - Head office</h3>
 				    	<hr>
 				    	<ul>
-					    	<li>1, (5 & 6) Princes Court,</li>
+					    	<li>Suite 1, (5 & 6) Princes Court,</li>
 					    	<li>Silver Street,</li>
 					    	<li>Ramsbottom</li>
 					    	<li>Bury</li>
@@ -52,7 +52,7 @@ get_header(); ?>
 		    	</div>
 		    	<div class="col-sm-6">
 			    	<div class="contact-info">
-				    	<h3><span>Brandrick</span> Search Maidenhead office</h3>
+				    	<h3><span>Brandrick</span> Search - Maidenhead office</h3>
 				    	<hr>
 				    	<ul>
 					    	<li>Suite 9,  Second Floor,</li>
@@ -74,7 +74,7 @@ get_header(); ?>
 	    </div>
 	</div>
 	
-	<div class="contact-form-section anim-section">
+	<div class="contact-form-section anim-section" id="contact-form">
 	    <div class="container">
 			<div class="row">
 				<div class="col-sm-10 col-sm-offset-1  col-md-10 col-md-offset-1 col-lg-offset-2 col-lg-8">

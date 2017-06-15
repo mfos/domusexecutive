@@ -1,6 +1,6 @@
 var 
 	config = {
-		url: 'domusexecutive.mfos.co.uk',
+		url: 'domusexecutive.local.mfos.co.uk',
 		themeName: 'brandricksearch',
 		autoprefixer: ['last 2 versions', 'IE 9']
 	},
@@ -18,7 +18,9 @@ var
     bower 				= require('gulp-bower'),
     imagemin 			= require('gulp-imagemin'),
     pngquant 			= require('imagemin-pngquant'),
-    
+    browserSync 		= require('browser-sync'),
+	gutil 				= require('gulp-util'),
+    reload 				= browserSync.reload,
     buildVersion = 'v2',
 
     base = '',
@@ -36,13 +38,11 @@ var
 		    	dir: themeDevelopment,
 		    },   
             styles: {
-                dir: themeDevelopment + '/sass',
                 src: themeDevelopment + '/sass/**/*.scss',
                 dest: themeRoot + '/css',
             },
             scripts: {
-                dir: themeDevelopment + '/js',
-                dircombined: themeDevelopment + '/js/combined',
+                root: themeDevelopment + '/js',
                 src: themeDevelopment + '/js/*.js',
                 srccombined: themeDevelopment + '/js/combined/**/*.js',
                 dest: themeRoot + '/js',
@@ -117,7 +117,8 @@ gulp.task('styles', function() {
 		.pipe(plugins.autoprefixer({ browsers: config.autoprefixer, cascade: false }))
 		.pipe(plugins.rename('style.min.css'))
 		.pipe(plugins.sourcemaps.write('.'))
-		.pipe(gulp.dest(paths.styles.dest));
+		.pipe(gulp.dest(paths.styles.dest))
+		.pipe(reload({ stream: true }));
 });
 
 
@@ -136,7 +137,8 @@ gulp.task('scripts.single', function() {
 			suffix: ".min" 
 			}))
 		.pipe(plugins.sourcemaps.write('.'))
-		.pipe(gulp.dest(paths.scripts.dest));
+		.pipe(gulp.dest(paths.scripts.dest))
+		.pipe(reload({ stream: true }));
 });
 
 
@@ -159,7 +161,8 @@ gulp.task('scripts.all', function() {
 		.pipe(plugins.uglify())
 		.pipe(plugins.rename('scripts.min.js'))
 		.pipe(plugins.sourcemaps.write('.'))
-		.pipe(gulp.dest(paths.scripts.dest));
+		.pipe(gulp.dest(paths.scripts.dest))
+		.pipe(reload({ stream: true }));
 });
 
 
@@ -248,23 +251,35 @@ gulp.task('themebuild', function(done) {
 });
 
 
+// SERVE
+// browser-sync task for starting the server.
+gulp.task('serve', ['watch'], function () {
+  // watch files
+  var files = [
+		paths.styles.src,
+		paths.scripts.srcroot + '/**/*.js',
+		paths.images.dest,
+		themeRoot + '/*.php'
+  ]
+
+  // initialize browsersync
+  browserSync.init(
+  files, {
+    // browsersync with a php server
+    proxy: config.url,
+	//port: 5757,
+    notify: false
+    
+  })
+})
+
+
 /*
 * This task will watch our SCSS, JS and Image files and compile
 */
-gulp.task('watch',  function() {
+gulp.task('watch', ['themebuild'],  function() {
 	
-    browserSync.init({
-		ghostMode: { scroll: false },
-		notify: false,
-		open: false,
-		proxy: config.url,
-		port: 5757,
-		files: [
-			paths.styles.dest + '/**/*.css',
-			paths.scripts.dest + '/**/*.js',
-			paths.images.dest
-		]
-	});
+	gutil.log(gutil.colors.black.bgGreen(' READY! -- Watching files -- '))
 	gulp.watch(paths.images.src + '/imgs/*', ['images']);
 	gulp.watch(paths.styles.src, ['styles']);
 	gulp.watch(paths.scripts.src, ['scripts']);
@@ -275,6 +290,4 @@ gulp.task('watch',  function() {
 /*
 * Default task, will simply output the tasks that are available
 */
-gulp.task('default', [], function() {
-	gulp.start( 'svg-icon-sprite', 'styles', 'scripts', 'images');
-});
+gulp.task('default', ['serve']);
