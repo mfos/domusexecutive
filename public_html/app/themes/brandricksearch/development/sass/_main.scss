@@ -44,12 +44,13 @@ a {
 	text-decoration: none; 
 	&:hover,
 	&:focus {
-		color: $color-green;
+		color: $color-red;
 		-webkit-text-decoration-color: $color-green;
 		text-decoration-color: $color-green;
 	}  
 	&:hover {
 		text-decoration: underline;
+		
 	}
   }
   
@@ -81,6 +82,38 @@ a {
   }
 }
 
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
 
 /********* CORE & COMMON LAYOUT **********/
 html {
@@ -329,7 +362,7 @@ div.anim-section {
 	  
 	    li {
 	        margin: .5em 0;
-	        border-bottom: 4px #F0F0F0 solid;
+	        border-bottom: 4px #000000 solid;
 	        
 			&::before {
 				content: none;
@@ -465,7 +498,7 @@ div.anim-section {
 		padding: 30px 25px;
 		background-color: $color-light-grey;
 		text-align: center;
-		margin-bottom: 10px;
+		margin-bottom: 1px;
 
 		h3 {
 			text-align: center;
@@ -511,7 +544,7 @@ body.home {
 
 .contact-page {
 	padding-bottom: 0;
-
+	background-color: #000000;
 	.contact-form-section {
 		background-color: $color-light-grey;
 		padding: 30px 0 50px;
@@ -522,6 +555,9 @@ body.home {
 		padding-bottom: 30px;
 		h3 {
 			padding-bottom: 10px;
+			span {
+				color: $color-red;
+			}
 		}
 		hr {
 			margin: 10px 0;
@@ -551,8 +587,35 @@ body.home {
 } 
 
 
+
 .page-what-we-do {
+	.internal-page {
+		padding-bottom: 0;
+		.service-grid {
+			
+		}		
+	}
+}
+
+.page-thank-you {
+	.internal-page {
+		padding: 0;
+		.middle-section {
+			padding: 0;
+		}
+	}
+}
+
+.page-about-us {
 	background-color: #000000;
+	.internal-page {
+		.head-top-section {
+			
+		}
+		.middle-section {
+			padding-top: 0;
+		}
+	}
 	article {
 		p {
 			color: #ffffff;
@@ -695,6 +758,11 @@ and (orientation : portrait) {
 	
 	.internal-page {
 		padding-bottom: 60px;
+		
+		.head-top-section {
+			height: 346px;
+		}
+		
 		.accordion {
 			width:500px;
 			margin-top: 30px;
@@ -702,6 +770,8 @@ and (orientation : portrait) {
 			margin-right: auto;
 			li {
 				a.toggle {
+					@include font-size(2);
+					@include line-height(2);
 					span {
 						svg {
 							@include transition(all .2s ease-in-out);    
@@ -727,6 +797,10 @@ and (orientation : portrait) {
 	.contact-page {
 		.contact-info {
 			margin-top: 28px;
+			h3 {
+				@include font-size(1.9);
+				@include line-height(2.3);	
+			}
 		}
 	}
 	
@@ -808,17 +882,21 @@ and (orientation : portrait) {
 		height:210px;
 		margin-bottom: 40px;
 		.block-grid-item {
-			width: 29.33333%;
+			width: 33.3333%;
 			float:left;
 			height:210px;
-			margin-left: 2%;
-			margin-right: 2%;
+			border-left:1px solid #ffffff;
+			padding: 15px;
+			&:first-child {
+				border-left:0;
+			}
 			h3 {
 				text-align: center;
 				@include font-size(2);
 				@include line-height(2.8);
 				color: #000000;
 				padding-bottom: 0;
+				margin-top: 28px;
 				position: relative;
 			}
 		}
@@ -827,11 +905,36 @@ and (orientation : portrait) {
 	/********* PAGE STYLES **********/
 
 	.page-what-we-do {
-		.service-grid {
-			@include animation(1s, 1.5s, fadeIn);
+		.internal-page {
+			.service-grid {
+				margin-top: 50px;
+				@include animation(1s, 1.5s, fadeIn);
+				.service-grid-item {
+					background-color: #000000;
+					a {
+						h2 {
+							color: #ffffff;
+						}
+						.line-link {
+							color: #ffffff;
+							&::after {
+								background-color: #ffffff;
+							}
+						}
+					}
+				}
+			}			
+		}
+
+	}	
+
+	.page-about-us {
+		.internal-page {
+			.head-top-section {
+				height:auto;
+			}
 		}
 	}	
-	
 }
 
 
@@ -888,7 +991,7 @@ and (orientation : portrait) {
 		padding-top: 0;
 		.head-top-section {
 			padding: 25px 0;
-
+			height:388px;
 			p {
 				@include font-size(2.6);
 				@include line-height(3.4);
@@ -903,8 +1006,8 @@ and (orientation : portrait) {
 		padding-bottom: 0;
 		.contact-info {
 			h3 {
-				@include font-size(3);
-				@include line-height(3.4);	
+				@include font-size(2.4);
+				@include line-height(2.6);	
 			}
 		}
 	}
@@ -988,14 +1091,29 @@ and (orientation : portrait) {
 		}
 	}
 	
+	/********* INTERNAL PAGE STRUCTURE **********/
 	
-	
-	.block-grid {
-		width:1170px;
-		margin-left: auto;
-		margin-right: auto;	
+	.internal-page {
+		.head-top-section {
+			height:388px;	
+		}
 	}
 	
+	.block-grid {
+		.block-grid-item {
+			padding: 15px 30px;
+		}
+	}
+	
+	/********* PAGE STYLES **********/
+	.contact-page {
+		.contact-info {
+			h3 {
+				@include font-size(3.1);
+				@include line-height(3.6);	
+			}
+		}
+	}	
 }
 
 /* Large devices (large desktops, 1400px and up) */

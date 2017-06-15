@@ -83,9 +83,13 @@ get_header(); ?>
 </div>
 <!-- End page-wrapper -->
 
-<?php if (! is_page('contact')): ?>
-	<!-- Contact footer form -->
+<?php if (!is_page('contact') && !is_page('about-us') && !is_page('candidates') ): ?>
+	<!-- Project Planner form -->
 	<?php get_template_part( 'template-includes/project-planner-form' ); ?>
+
+<?php elseif (is_page('candidates')): ?>
+	<!-- Project Planner form -->
+	<?php get_template_part( 'template-includes/candidate-form' ); ?>
 <?php endif; ?>
 
 

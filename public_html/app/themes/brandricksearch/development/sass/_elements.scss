@@ -178,6 +178,7 @@ article.page {
             @include font-size(1.8);
             @include line-height(2.8);
             &::before {
+	            @include animation(1s, 1.5s, fadeInLeft);
 	            content: "";
 				@extend .svg-bullet-arrow;
 				@extend .svg-bullet-arrow-dims;

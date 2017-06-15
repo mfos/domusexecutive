@@ -90,10 +90,7 @@ jQuery(document).ready(function ($) {
         }
       });
       
-    // Contact form Radio buttons 
-	$('#contact-footer-form').each(function(){
-	    $(this).parent('.ginput_container_select').addClass('chosen-after');
-	});
+
 
     // Parallax Scrolling
     var scale = 0.4;

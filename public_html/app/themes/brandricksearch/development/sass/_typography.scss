@@ -176,8 +176,8 @@ h4 {
 @media (min-width: $screen-lg-min) {
 	
 	p {
-		@include font-size(1.7);
-		@include line-height(2.9);
+		@include font-size(1.9);
+		@include line-height(3.1);
 	}
 
 }

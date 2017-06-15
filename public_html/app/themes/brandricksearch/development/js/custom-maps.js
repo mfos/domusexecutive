@@ -193,7 +193,7 @@ function ramsbottomOffice() {
         map.setMapTypeId('styled_map');
         map.panBy(0, -30);
 		
-		var image = new google.maps.MarkerImage("/app/themes/brandricksearch/images/brMapMarker.png", null, null, null, new google.maps.Size(48,60)); // Create a variable for our marker image.
+		var image = new google.maps.MarkerImage("/app/themes/brandricksearch/images/brMapMarker.png", null, null, null, new google.maps.Size(75,60)); // Create a variable for our marker image.
 			
 		var marker = new google.maps.Marker({ // Set the marker
 			position: myLatlng, // Position marker to coordinates
@@ -243,7 +243,7 @@ function maidenheadOffice() {
         map.setMapTypeId('styled_map');
         map.panBy(0, -30);
 		
-		var image = new google.maps.MarkerImage("/app/themes/brandricksearch/images/brMapMarker.png", null, null, null, new google.maps.Size(48,60)); // Create a variable for our marker image.
+		var image = new google.maps.MarkerImage("/app/themes/brandricksearch/images/brMapMarker.png", null, null, null, new google.maps.Size(75,60)); // Create a variable for our marker image.
 			
 		var marker = new google.maps.Marker({ // Set the marker
 			position: myLatlng, // Position marker to coordinates

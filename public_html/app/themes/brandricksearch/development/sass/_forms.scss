@@ -100,7 +100,7 @@ option {padding:.25em .5em;}
                 label {
                     display: none
                 }
-                &#field_1_5 {
+                &.fileinput {
 				    .gfield_description {
 					    height:20px;
 					    @include font-size(1.4);
@@ -406,7 +406,7 @@ option {padding:.25em .5em;}
 					&#field_1_3 {
                        margin-left: 64px;
                     }   
- 					&#field_1_5 {
+ 					&.fileinput {
                        margin-left: 153px;
                        margin-top: 15px;
                        label {
@@ -560,7 +560,7 @@ option {padding:.25em .5em;}
                 .gfield {
 	                width:320px;
 	                
-	                &#field_1_5 {
+	                &.fileinput {
 		                margin-left: 188px;
 	                }
 	                
@@ -695,9 +695,7 @@ option {padding:.25em .5em;}
                     width:308px;
 
                     .ginput_container {
-                     
 
-                     
     					&.ginput_container_radio {
 
 	    					ul {
