@@ -83,7 +83,7 @@ get_header(); ?>
 </div>
 <!-- End page-wrapper -->
 
-<?php if (!is_page('contact') && !is_page('about-us') && !is_page('candidates') ): ?>
+<?php if (!is_page('contact') && !is_page('about-us') && !is_page('what-we-do') && !is_page('candidates') && !is_page('thank-you') ): ?>
 	<!-- Project Planner form -->
 	<?php get_template_part( 'template-includes/project-planner-form' ); ?>
 
