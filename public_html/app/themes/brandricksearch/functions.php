@@ -154,8 +154,14 @@ function brandricksearch_scripts() {
 add_action( 'wp_enqueue_scripts', 'brandricksearch_scripts' );
 
 
-
-
+// Remove WP Version From Styles	
+add_filter( 'style_loader_src', 'sdt_remove_ver_css_js', 9999 );
+// Function to remove version numbers
+function sdt_remove_ver_css_js( $src ) {
+	if ( strpos( $src, 'ver=' ) )
+		$src = remove_query_arg( 'ver', $src );
+	return $src;
+}
 
 /**
  * Custom Functions

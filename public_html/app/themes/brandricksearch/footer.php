@@ -14,10 +14,10 @@
 <div id="footer-wrapper">
 
         <div class="contact-container left">
-			<p>© Copyright - Domus Executive Ltd - All rights reserved</p>
+			<p>© Copyright - Brandrick Search Ltd - All rights reserved</p>
         </div>		
         <div class="contact-container right">
-			<p><span>TEL: <a href="tel:0800299299">0800 299 299</a></span> <span>EMAIL: <a href="mailto:contact@brandricksearch.com">contact@brandricksearch.com</a></span></p>
+			<p><span>TEL: <a href="tel:01706282696">01706 282 696</a></span> <span>EMAIL: <a href="mailto:contact@brandricksearch.com">contact@brandricksearch.com</a></span></p>
         </div>	
   
 </div>

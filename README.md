@@ -1,5 +1,5 @@
-# Domus Executive wordpress development setup
-## Domus Executive
+# Brandrick Search wordpress development setup
+## Brandrick Search
 
 #### Requirements:
 - Git (http://git-scm.com)
@@ -28,7 +28,7 @@ Install Composer locally in to the root of the project
 Once they're installed, go to the parent directory where the project will be cloned into, and...
 ```sh
 $ git clone <add git repo here>
-$ cd domusexecutive
+$ cd brandricksearch
 $ npm install
 ```
 

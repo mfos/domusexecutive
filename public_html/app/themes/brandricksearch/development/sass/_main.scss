@@ -223,6 +223,8 @@ div.anim-section {
 				margin-left: 15px;
 				width:170px;
 				height:1px;
+				display: block;
+				text-align: left;
 				@include animation(2.5s, 1.5s, fadeIn);
 			}		    
 	    }

@@ -78,6 +78,7 @@ option {padding:.25em .5em;}
 		                }
 	                }
                 }
+     
                 &.gfield_error {
 	                background-color: transparent;
 	                border: none;
@@ -297,7 +298,12 @@ option {padding:.25em .5em;}
 		                height:165px;
 	                }
                 }
-
+				&#field_3_27 {
+					float:none;
+					label {
+						display: none !important;
+					}
+				}
 
             }         
             .gform_validation_container {
@@ -309,6 +315,18 @@ option {padding:.25em .5em;}
                         color: #FF001F;
                     }
             }
+            
+            .ginput_recaptcha {
+	                background-color: transparent !important;
+	                width:auto !important;
+            }
+			.ginput_recaptcha {
+				> div {
+					margin-left: auto;
+					margin-right: auto;
+					margin-bottom: 20px;
+				}
+			} 
             
         }
         
@@ -366,7 +384,36 @@ option {padding:.25em .5em;}
             }
         }
     }
-
+    
+    .gsection_title {
+	    margin-top: 40px;
+    }
+    
+    //Candidate Form
+	&#gform_wrapper_3 {
+		.gform_body {
+			.gform_fields {
+				.gfield {
+					&.gsection {
+						width:100%;
+					}
+					label {
+						display: block;
+						@include font-size(1.6);
+						@include line-height(2);
+						color: $color-grey;
+						margin-bottom: 10px;
+					}
+					&#field_3_27 {
+						height:100px;
+						.ginput_container {
+							height:auto;
+						}
+					}
+				}
+			}
+		}
+	}
   
 
 }
@@ -546,7 +593,36 @@ option {padding:.25em .5em;}
 			}
 		}
 	}
+    //Candidate Form
+	#gform_wrapper_3 {
+		.gform_body {
+			.gform_fields {
+				.gfield {
+					width:48%;
+					margin-left: 1%;
+					margin-right: 1%;
+					&.gsection {
+						width:100%;
+					}
+					label {
+						min-height: 40px;
+					}
+					&#field_3_26 {
+						margin-top: 49px;
+					}
+					&#field_3_27 {
+						margin-top: 49px;
+						width:100%;
+						margin-left: auto;
+						margin-right: auto;
+						float: left;
 
+						
+					}
+				}
+			}
+		}
+	}
 	
 }
 /* Medium devices (desktops, 992px and up) */

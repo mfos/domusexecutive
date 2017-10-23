@@ -1,6 +1,6 @@
 {
-  "name": "domusexecutive",
-  "description": "domusexecutive",
+  "name": "brandricksearch",
+  "description": "brandricksearch",
   "authors"     : [
     {
       "name"    : "Michael Foster",
@@ -17,11 +17,11 @@
       "type": "package",
       "package": {
         "name": "wp-premium/gravityforms",
-        "version": "2.2.1",
+        "version": "2.2.5",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
-          "url": "https://github.com/wp-premium/gravityforms/archive/2.0.7.zip"
+          "url": "https://github.com/wp-premium/gravityforms/archive/2.2.5.zip"
         },
         "require" : {
           "fancyguy/webroot-installer": "1.1.0"
@@ -30,8 +30,8 @@
     }
   ],
   "require": {
-    "johnpbloch/wordpress": ">=4.7.3",
-    "wp-premium/gravityforms": "*",
+    "johnpbloch/wordpress": ">=4.8.2",
+    "wp-premium/gravityforms": "2.2.5",
     "wpackagist-plugin/akismet": "3.1.1",
     "wpackagist-plugin/wordpress-seo": "*",
     "wpackagist-plugin/sf-move-login": "*",

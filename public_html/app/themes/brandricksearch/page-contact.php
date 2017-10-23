@@ -35,14 +35,14 @@ get_header(); ?>
 				    	<h3><span>Brandrick</span> Search - Head office</h3>
 				    	<hr>
 				    	<ul>
-					    	<li>Suite 1, (5 & 6) Princes Court,</li>
+					    	<li>Suite (5-6) Princes Court,</li>
 					    	<li>Silver Street,</li>
 					    	<li>Ramsbottom</li>
 					    	<li>Bury</li>
 					    	<li>BL0 0BJ</li>
 					    	</ul>
 					    <ul>
-					    	<li>TEL: 0800 299 299</li>
+					    	<li>TEL: 01706 282 696</li>
 					    </ul>
 					    <ul>
 					    	<li>EMAIL: contact@brandricksearch.com</li>
@@ -62,7 +62,7 @@ get_header(); ?>
 					    	<li>SL6 1P</li>
 					    	</ul>
 					    <ul>
-					    	<li>TEL: 01628 630 104</li>
+					    	<li>TEL: 01706 282 696</li>
 					    </ul>
 					    <ul>
 					    	<li>EMAIL: contact@brandricksearch.com</li>

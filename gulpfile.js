@@ -1,6 +1,6 @@
 var 
 	config = {
-		url: 'domusexecutive.local.mfos.co.uk',
+		url: 'brandricksearch.local.mfos.co.uk',
 		themeName: 'brandricksearch',
 		autoprefixer: ['last 2 versions', 'IE 9']
 	},

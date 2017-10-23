@@ -17,6 +17,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 	<?php wp_head(); ?>
 	<!-- GA code -->
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+
 </head>
 
 <body <?php body_class('push-menu'); ?>>
